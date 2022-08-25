@@ -1,0 +1,115 @@
+﻿@model IEnumerable<OnlineShoppingStore.Models.Order>
+
+@{
+    ViewBag.Title = "OrderHistory";
+    Layout = "~/Views/Shared/_LayoutMain.cshtml";
+}
+
+
+<main class="main">
+    <nav class="breadcrumb-nav">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="demo1.html"><i class="d-icon-home"></i></a></li>
+                <li>About Us</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="page-header pl-4 pr-4" style="background-image: url(/External/Main/images/page-header/about-us.jpg)">
+        <h3 class="page-subtitle font-weight-bold">Welcome Riode</h3>
+        <h1 class="page-title font-weight-bold lh-1 text-white text-capitalize">Our Services</h1>
+        <p class="page-desc text-white mb-0">
+            Lorem quis bibendum auctor, nisi elit consequat ipsum,<br> nec
+            sagittis sem nibh id elit.
+        </p>
+    </div>
+
+    <table id="example" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th class="pl-2">Order</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Total</th>
+                <th class="pr-2">Actions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="order-number"><a href="#">@Html.DisplayFor(modelItem => item.Order_ID)</a></td>
+                    <td class="order-date"><time>@Html.DisplayFor(modelItem => item.Order_Date)</time></td>
+                    <td class="order-status"><span>@Html.DisplayFor(modelItem => item.Order_Status)</span></td>
+                    <td class="order-total"><span>@Html.DisplayFor(modelItem => item.Total_Amount)</span></td>
+                    <td class="order-action">
+                        <a href='@Html.ActionLink("Details", "Details", new { id = item.Order_ID })' class="btn btn-primary btn-link btn-underline">View</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+    @*<table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Total_Amount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Order_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Payment_Made)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Order_Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.User.Name)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Total_Amount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order_Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Payment_Made)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Order_Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.Name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Order_ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Order_ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Order_ID })
+                    </td>
+                </tr>
+            }
+
+        </table>*@
+</main>

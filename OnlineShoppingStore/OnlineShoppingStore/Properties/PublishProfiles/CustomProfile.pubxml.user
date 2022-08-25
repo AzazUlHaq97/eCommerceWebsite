@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5ctteDZlcUeZcQAXBv8vfQAAAAACAAAAAAADZgAAwAAAABAAAACkT3YALwvMjlOYhCbeVpurAAAAAASAAACgAAAAEAAAAD0YIAl2x4TGeStHe1hl754YAAAA+GUYSg+l00p52KPu+b+nic4P2iAcadf5FAAAAFa/DGvAPO7y7+UCcpNy6tvPUkG/</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ecom.somee.com/www.ecom.somee.com/wwwroot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 09:32:26</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/27/2021 16:09:06</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/06/2021 12:32:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
